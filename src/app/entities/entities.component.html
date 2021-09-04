@@ -1,0 +1,194 @@
+
+
+
+<header>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css">
+</header>
+
+
+
+
+
+<div  class="reset">
+ 
+  <app-header></app-header>
+  <mat-toolbar > <span>
+    <mat-icon class="hello">chat </mat-icon>
+   demobot <mat-icon>arrow</mat-icon></span>
+    <button mat-button  fxHide.lt-md>
+      <span routerLink="/generateur" class="active" routerLinkActive="active">Génerateur</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span [routerLink]="['/ai-provider']">Intelligence artificielle</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span routerLink="/canaux" >Canaux</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span routerLink="/analytique">Analytique</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+    </button>
+    <mat-icon class="icons">
+      extension
+      settings
+      people
+    </mat-icon>
+  
+  </mat-toolbar>
+<div class="menu"style="">
+    <div (click)="load(m)" *ngFor="let m of menus"  [class.color]="m.title == entities" class="card card-detaills" style="width: 100%;">
+        <div class="card-body">
+          <div class="card-title titre">{{m.title}}</div>
+          
+          <div class="card-text desc">{{m.Description}}</div>
+          
+        </div>
+      </div>
+
+
+     
+</div>
+<div style="position:absolute;top:15%;left:31%;color:rgb(75, 50, 160);font-size: 30px;">Entities<strong></strong> </div>
+<div class="intents">
+<img href="#modal-example7" uk-toggle width="35px" height="35px" src="assets/find.png">
+
+
+<!-- This is the modal -->
+<div id="modal-example7" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title"style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);" >Find Entities</h2>
+        
+        <input class="form-control" placeholder="Entities">
+        <br>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Find</button>
+        </p>
+    </div>
+</div>
+
+&nbsp;
+&nbsp;
+<a style="color: grey;font-size: 30px;"> ...</a>
+&nbsp;
+&nbsp;
+<button class="uk-button uk-button-default uk-margin-small-right btn" type="button" uk-toggle="target: #modal-example3"  style="background: rgb(46, 223, 73);border-radius: 7px;color: white;">+ Add Entities</button>
+
+
+<div id="modal-example3" uk-modal>
+  <div class="uk-modal-dialog uk-modal-body">
+      <h2 class="uk-modal-title"style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);" >Add Entities</h2>
+      <br>
+      <form [formGroup]="addEntities" (ngSubmit)="AddIntent()">
+        <input class="form-control" placeholder="Value Entities" formControlName="value" type="text">
+        <br>
+        <input class="form-control" placeholder=" Synonym " formControlName="synonym" type="text">
+        <br>
+       
+        <br>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close"  type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="submit" [disabled]="f.value.errors || f.synonym.errors">ADD</button>
+        </p>
+
+      </form>
+     
+  </div>
+</div>
+
+
+
+<!-- This is the modal -->
+
+
+
+
+</div>
+<hr style="position:absolute;top:23%;left:30%;color:gray;width: 60%;height: 2px;">
+
+<a *ngIf="IntentsNotFound" style="position: absolute;top: 55%;left:45%;color: gray;font-size: 35px;">
+No Entities Found =(</a>
+
+<div class="contenu"*ngIf="!IntentsNotFound"style="position:absolute;left:30%;top:30%;width: 100%;height: 100%;">
+  <div style="width:60%"class="row">
+    <div *ngFor= "let i of intents2 " style="margin-top: 5px;margin-bottom: 5px;"class="col-sm-4">
+      <div style="background: rgba(204, 222, 241, 0.122);border-radius: 5px;box-shadow: 10px 5px 5px rgb(220, 221, 220); height: 100%;width: 100%;"class="card">
+        <div class="card-body">
+          <h5 class="card-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);">Entities id:{{i.id}}
+            <div style="float:right;margin-left: 10px;">
+              <a  (click)="changeIdIntent(i.id)" href="#modal-example4" uk-toggle style="margin: 3px;float: right;" style="font-size: 11px;"class="btn btn-outline-warning">Update</a>
+
+              
+
+<!-- This is the modal -->
+<div id="modal-example4" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title"style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);" >Update Entities</h2>
+        <br>
+        <form [formGroup]="updateEntities" (ngSubmit)="UpdateEntities()">
+          <input placeholder="Name Entities" class="form-control" formControlName="value" >
+          <br>
+          <input placeholder="Synonym" class="form-control" formControlName="synonym">
+          <br>
+          <p class="uk-text-right">
+              <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button> &nbsp;
+              <button  style="border-radius: 6px;"class="uk-button uk-button-primary" type="submit" [disabled]=" g.value.errors || g.synonym.errors">UPDATE</button>
+          </p>
+        </form>
+        
+    </div>
+</div>
+              <a (click)="changeIdIntent(i.id)"href="#modal-example5" uk-toggle style="margin: 3px;" style="font-size: 11px;margin-left: 5px;"  class="btn btn-outline-danger">Delete</a>
+
+              
+
+<!-- This is the modal -->
+<div id="modal-example5" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);">Confirmation</h2>
+        <p>Confirme Delete Entities</p>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button> &nbsp;
+            <button style="border-radius: 6px;"class="uk-button uk-button-primary" type="button" (click)="deleteEntities()">Yes </button>
+        </p>
+    </div>
+</div>
+            </div>
+          </h5>
+          <br>
+          
+          <p class="card-text"  style="color:cornflowerblue;font-family: Georgia, 'Times New Roman', Times, serif;">Value : {{i.value}}</p>
+          
+          <p class="card-text" style="color:cornflowerblue;font-family: Georgia, 'Times New Roman', Times, serif;">Synonym : {{i.synonym}}</p>
+          <!-- This is a button toggling the modal -->
+
+
+<!-- This is an anchor toggling the modal -->
+
+
+<!-- This is the modal -->
+
+          
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <nav style="margin-left:40%;margin-top: 5%;" aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item"><button [disabled]="disabledPrevious" (click)="previous()" class="page-link btn btn-primary">Previous</button></li>
+        &nbsp; &nbsp; &nbsp;
+       
+        <li class="page-item"><button [disabled]="disabledNext" (click)="next()" class="page-link btn btn-primary " >&nbsp; Next &nbsp;</button></li>
+      </ul>
+    </nav>
+    
+      
+  </div>
+</div>
+</div>
+
+
+
+
+      
+    
+  
+
+

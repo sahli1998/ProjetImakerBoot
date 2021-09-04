@@ -1,0 +1,70 @@
+<header>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+</header>
+
+<app-navbar style="background: rgb(40, 40, 81);"></app-navbar>
+<div style="position: absolute;top:10%;width: 20%;box-shadow: 10px 5px 5px rgb(149, 150, 149);">
+    <div style="" (click)="load(m)" *ngFor="let m of menus" [class.color]="m.title == AIprovider" class="card card-detaills" style="width: 100%;">
+        <div class="card-body">
+          <div class="card-title titre">{{m.title}}</div>
+          
+          <div class="card-text desc">{{m.Description}}</div>
+          
+        </div>
+      </div>
+
+     
+</div>
+<div style="position:absolute;top:15%;left:30%;color:gray;font-size: 25px;"><strong>MICRO LUIS</strong> </div>
+<hr style="position:absolute;top:20%;left:30%;color:gray;width: 60%;height: 2px;">
+
+
+<div style="position:absolute;top:30%;left:30%;width:60%">
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-pills card-header-pills">
+        <li class="nav-item">
+          <a [class.color]="overview" (click)="over()"class="nav-link b" >Overview</a>
+        </li>
+        <li   class="nav-item conf">
+          <a [class.color]="configuration" (click)="config()" class="nav-link b" >Configuration</a>
+        </li>
+        <li  class="nav-item deco">
+          <a  class="nav-link b"  >Documentation</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <div *ngIf="overview">
+        <img style="float: left;margin-left: 5%;" width="70px" height="70px" src="assets/9luis.jpg">
+        <p class="card-text" style="margin-left: 10px;">Access the panel and log in with your account. If you don't have an account yet , create one .</p>
+      </div>
+      <div *ngIf="configuration" >
+        <img style="float: left;margin-left: 5%;" width="70px" height="70px" src="assets/9luis.jpg">
+        <p class="card-text" style="">AUTHENTIFICATION WITH KEY API</p>
+        <br>
+        <br>
+        
+        <input  class="form-control" aria-label="Sizing example input" style="border-radius: 5px;" type="text" placeholder="Primary Key" >
+        <br>
+        <br>
+        <input class="form-control" aria-label="Sizing example input"style="border-radius: 5px;"type="text" placeholder="Cognitive Service Resource Key"  >
+        <br>
+        <br>
+        <input class="form-control" aria-label="Sizing example input"style="border-radius: 5px;"type="text" placeholder="Application Region"  >
+        <br>
+        <br>
+
+        <button type="button" class="btn btn-outline-primary">Save</button>
+
+      </div>
+      
+    </div>
+  </div>
+</div>

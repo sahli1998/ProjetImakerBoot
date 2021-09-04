@@ -1,0 +1,265 @@
+<header>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css">
+</header>
+
+<div class="reset">
+  <app-header></app-header>
+  <mat-toolbar > <span>
+    <mat-icon class="hello">chat </mat-icon>
+   demobot <mat-icon>arrow</mat-icon></span>
+    <button mat-button  fxHide.lt-md>
+      <span routerLink="/generateur" class="active" routerLinkActive="active">Génerateur</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span [routerLink]="['/ai-provider']">Intelligence artificielle</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span routerLink="/canaux" >Canaux</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span routerLink="/analytique">Analytique</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span>...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+    </button>
+    <mat-icon class="icons">
+      extension
+      settings
+      people
+    </mat-icon>
+  
+  </mat-toolbar>
+    <div class="menu"style="">
+        <div (click)="load(m)" *ngFor="let m of menus"  [class.color]="m.title == Intents" class="card card-detaills" style="width: 100%;">
+            <div class="card-body">
+              <div class="card-title titre">{{m.title}}</div>
+              
+              <div class="card-text desc">{{m.Description}}</div>
+              
+            </div>
+          </div>
+    
+    
+         
+    </div>
+    <div style="position:absolute;top:15%;left:31%;color:rgb(75, 50, 160);font-size: 30px;">Intents<strong></strong> </div>
+    <div class="intents">
+    <img href="#modal-example7" uk-toggle width="35px" height="35px" src="assets/find.png">
+    
+    
+    <!-- This is the modal -->
+    <div id="modal-example7" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);">Find Intents</h2>
+            
+            <input class="form-control" placeholder="Intent">
+            <br>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary" type="button">Find</button>
+            </p>
+        </div>
+    </div>
+    
+    &nbsp;
+    &nbsp;
+    <a style="color: grey;font-size: 30px;"> ...</a>
+    &nbsp;
+    &nbsp;
+    <button class="uk-button uk-button-default uk-margin-small-right btn" type="button" uk-toggle="target: #modal-example3"  style="background: rgb(46, 223, 73);border-radius: 7px;color: white;">+ Add Intents</button>
+    
+    
+    <div id="modal-example3" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body">
+          <h2 class="uk-modal-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(13, 164, 187);">ADD INTENTS</h2>
+          
+          <form [formGroup]="AddIntent" (ngSubmit)="addIntent()">
+            <input class="form-control" placeholder="Name Intent"formControlName="AddNameIntent" type="text">
+            <br>
+           
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close"  type="button">Cancel</button> &nbsp;
+                <button class="uk-button uk-button-primary" type="submit" [disabled]="g.AddNameIntent.errors">Save</button>
+            </p>
+    
+          </form>
+          
+      </div>
+    </div>
+    
+    
+    
+    <!-- This is the modal -->
+    
+    
+    
+    
+    </div>
+    <hr style="position:absolute;top:23%;left:30%;color:gray;width: 60%;height: 2px;">
+    
+    <a *ngIf="IntentsNotFound" style="position: absolute;top: 55%;left:45%;color: gray;font-size: 35px;">
+    No Intents Found =(</a>
+    
+    <div class="contenu" *ngIf="!IntentsNotFound"style="position:absolute;left:30%;top:30%;width: 100%;height: 100%;">
+      <div style="width:60%"class="row">
+        <div *ngFor= "let i of intents2 " style="margin-top: 5px;margin-bottom: 5px;"class="col-sm-4">
+          <div style="background: rgba(204, 222, 241, 0.122);border-radius: 5px;box-shadow: 10px 5px 5px rgb(220, 221, 220); height: 100%;"class="card">
+            <div class="card-body">
+              <h5 class="card-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);">Intent id:{{i.id}}
+                <div style="float:right;margin-left: 10px;">
+                  
+                  <a (click)="changeIdIntent(i.id)" href="#modal-example4" uk-toggle style="margin: 3px;float: right;" style="font-size: 10px;"class="btn btn-outline-warning">Update</a>
+    
+                  
+    
+    <!-- This is the modal -->
+    <div id="modal-example4" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);">Update Intent</h2>
+            <br>
+            <form [formGroup]="UpdateIntent" (ngSubmit)="UpdateNewIntent()">
+              <input class="form-control" placeholder="New Name" formControlName="UpdateNameIntents" type="text">
+              <br>
+              <p class="uk-text-right">
+                  <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                  <button class="uk-button uk-button-primary" type="submit"[disabled]="f.UpdateNameIntents.errors">Save</button>
+              </p>
+    
+            </form>
+            
+        </div>
+    </div>
+                  <a  (click)="changeIdIntent(i.id)" href="#modal-example5" uk-toggle style="margin: 3px;" style="font-size: 10px;margin-left: 5px;" class="btn btn-outline-danger">Delete</a>
+    
+                  
+    
+    <!-- This is the modal -->
+    <div id="modal-example5" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <h2 class="uk-modal-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);">Confirmation</h2>
+            <p>Confirme Delete Intent</p>
+            <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button (click)="deleteIntent()" class="uk-button uk-button-primary" type="button" >Yes </button>
+            </p>
+        </div>
+    </div>
+                </div>
+              </h5>
+              <br>
+              <p style="font-family:'Times New Roman', Times, serif;font-size: 25px;color: rgb(127, 191, 223);"> Name :{{i.name}}</p>
+              
+              
+              <p class="card-text"> </p>
+              <!-- This is a button toggling the modal -->
+    <a (click)="changeIdIntent(i.id)" (click)="Example(i.id)" style="float: right;font-size: 10px;" class="btn btn-outline-primary" href="#modal-example" uk-toggle>Examples</a>
+    
+    <!-- This is an anchor toggling the modal -->
+    
+    
+    <!-- This is the modal -->
+    <div style="border-radius: 10px;padding: 10px;"id="modal-example" uk-modal>
+        <div   class="uk-modal-dialog uk-modal-body">
+          <button (clcik)="changeIdIntent(i.id)" class="uk-button uk-button-default uk-margin-small-right btn" type="button" uk-toggle="target: #modal-example2" style="background: rgb(46, 223, 73);border-radius: 7px;color: white;float: right;">+ Add Examples</button>
+          <div id="modal-example2" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <h2 class="uk-modal-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);">Add New Example</h2>
+                
+                <form [formGroup]="AddExample" (ngSubmit)="addExample()">
+                  <input class="form-control" placeholder="New Example" formControlName="value" >
+                  <br>
+                  <p class="uk-text-right">
+                      <button class="uk-button uk-button-default uk-margin-small-right btn btn-outlet-primary" style="border-radius: 5px;"type="button" uk-toggle="target: #modal-example">Cancel</button>
+                      <button  class="uk-button uk-button-primary" style="border-radius: 5px;" type="submit" [disabled]="h.value.errors">ADD</button>
+                  </p>
+                </form>
+                
+            </div>
+        </div>
+            <h2 class="uk-modal-title" style="font-size: 20px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);">{{i.name}}  Examples </h2>
+            <br>
+            <br>
+            <div class="card" style="width: 95%">
+              <ul class="list-group list-group-flush">
+                <li *ngFor="let s of examples"class="list-group-item" style="font-size: 20px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">{{s.id}}-{{s.value}}
+    
+                  <div style="float:right">
+                    <img (click)="changeIdIntent(s.id)" *ngIf="!(s == exampleClicked)" (click)="UpdateExample(s)"width="35px" height="35px" src="assets/update.png">
+                    <img  (click)="changeIdIntent(s.id)" href="#modal-example6" uk-toggle *ngIf="!(s == exampleClicked)" width="35px" height="35px" style="margin-left: 5px;"src="assets/delete.png">
+    
+                    
+    
+                    <!-- This is the modal -->
+                    <div id="modal-example6" uk-modal>
+                        <div class="uk-modal-dialog uk-modal-body">
+                            <h2 class="uk-modal-title" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: rgb(50, 203, 226);">Confirmation</h2>
+                            <p>Confirme Deleting Example ?</p>
+                            <p class="uk-text-right">
+                                <button class="uk-button uk-button-default uk-modal-close" type="button"href="#modal-example" uk-toggle >Cancel</button>
+                                <button class="uk-button uk-button-primary" type="button" (click)="deleteExample()">Yes</button>
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div *ngIf="s == exampleClicked" >
+                      <form [formGroup]="UpdatExample" (ngSubmit)="updateExample()">
+                        <input class="form-control" type="text" placeholder="example" formControlName="UpdateExampleValue" >
+                        <button [disabled]="k.UpdateExampleValue.errors"class="btn btn-primary" style="background: rgb(66, 241, 66);" >Update</button> &nbsp;
+    
+                    
+                    
+                        <button (click)="closeUpdateExample()"class="btn btn-outline-primary">
+                          <img  width="20px" height="20px" src="assets/close.png">
+                        </button>
+    
+                      </form>
+                    
+                    </div>
+                  </div>
+                </li>
+                &nbsp; 
+                
+                
+              
+              </ul>
+              
+            </div>
+            <br>
+            <br>
+            <button style="float:right;"class="uk-button uk-button-default uk-modal-close btn btn-outlet-primary" type="button">Cancel</button>
+        </div>
+    </div>
+              
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <nav style="margin-left:40%;margin-top: 5%;" aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><button [disabled]="disabledPrevious" (click)="previous()" class=" btn btn-primary page-link">Previous</button></li>
+            &nbsp;  &nbsp;  &nbsp;  &nbsp;
+           
+            <li    class="page-item"><button [disabled]="disabledNext" (click)="next()" class=" btn btn-primary page-link" >&nbsp; Next &nbsp;</button></li>
+          </ul>
+        </nav>
+        
+          
+      </div>
+    </div>
+</div>
+<app-footer></app-footer>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+  
+

@@ -1,0 +1,35 @@
+
+<app-navbar></app-navbar>
+<div  class="reset">
+  
+    <nav style="background:rgb(33, 33, 63);"class="navbar ">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          
+          
+        </div>
+      </div>
+    </nav>
+    <div class="contenu">
+      <div class="text2">
+        <a class="text1 "style="color: gray;"> > Forget Your Password ?</a>
+        <br>
+        <br>
+        
+        <a> If you do not recieve a message </a>
+              <br>
+              <a>in about 5 minute click the</a>
+              <br>
+              <a>button below to resend it</a>
+              <br>
+              <button (click)="Send()"style="margin-top:1%;"id="send" class="btn btn-primary">Resend</button>
+              <div *ngIf="loading" class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+      </div>
+      
+   
+  
+    </div>
+    </div>
+    <app-footer style="position: absolut;top: 100%;"></app-footer>

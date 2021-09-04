@@ -1,0 +1,562 @@
+
+<main>
+  <section class="create-bot" id="omos">
+    <div class="container pt-lg-md">
+      <div class="row justify-content-center">
+
+
+        <div class="card-header">
+          <div class="text-muted text-center mb-4 " style="padding-top:30px;">
+            <a class="active" href="#"><i class="fal fa-comment-alt"></i>
+              IMakeBot</a>
+          </div>
+
+          <div class="text-centerr">
+            <p>Créer Un Chatbot</p>
+          </div>
+          <div class="text-center1 ">
+            <p>Donnez un nom à votre Chatbot</p>
+          </div>
+          <!-- <div class="containerr">
+             <div class="wrapper">
+               <input type="file" class="file-input"  [accept]="requiredFileType" (change)="onselectFile($event)" #fileUpload >
+               <div class="file-upload">
+                 <button mat-mini-fab color="primary" class="btn btn-outline" (click)="fileUpload.click()">
+                   <i class="fas fa-cloud-upload-alt"></i>
+                 </button>
+                 <img [src]="url" height="100">
+                 {{fileName || "Insérer image"}}
+                 </div>
+             </div>
+           </div>-->
+        </div>
+        <form [formGroup]= "this.botService.dataForm" (ngSubmit)="onSubmit()" >
+          <input type="hidden" formControlName="id" id="id">
+          <div class="wrapper">
+            <input type="file" class="file-input" accept="image/*" (change)="onSelectFile($event)">
+            <div class="file-upload">
+              <img   [src]="imgURL"  class="rounded" *ngIf="imgURL"/>
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+
+            <input type="text"  formControlName="name" name="name" class="form-control" id="name" >
+          </div>
+
+          <!--<div class="container">-->
+          <div class="form-group">
+            <button type="button" class="btn btn-outline-dark btn-block" >
+              <h6 routerLink="/chatBoot" class="pre">PRECEDENT</h6>
+            </button>
+            <button type="submit" class="btn btn-outline-info btn-block">Terminer</button>
+          </div>
+        </form>
+
+
+      </div>
+    </div>
+
+
+
+    <div style="padding-top: 270px;">
+      <img class="Besoin-daideeee"  src="../../assets/wave.png">
+    </div>
+
+
+    <div class="Rectangle-11">
+      <hr>
+      <img class="Besoin-daide" src="../../assets/scss/besoin.png">
+    </div>
+
+
+  </section>
+</main>
+<style>
+
+
+  .shadow,
+  .card-profile-image img {
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, .15) !important;
+  }
+  .card-profile-image {
+    position: relative;
+  }
+  .card-profile-image img {
+    position: absolute;
+    left: 50%;
+    max-width: 180px;
+    transition: all .15s ease;
+    transform: translate(-50%, -30%);
+    border-radius: .375rem;
+  }
+  .rounded{
+    height: 100%;
+    width: 100%;
+
+
+    position:static;
+
+  }
+  .file-input{
+    position: absolute;
+    bottom: 0;
+    outline: none;
+    color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    margin-bottom: -3px;
+    cursor: pointer;
+    transition: 0.5s;
+    background: rgba(0,0,0,0.5);
+  }
+  .file-input::-webkit-file-upload-button{
+    visibility: hidden;
+  }
+  .file-input::before
+  {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    content:'Insérer image' ;
+    font-size: 10px;
+    color: #fff;
+  }
+  .file-input::after{
+    content: 'Update';
+    font-family:'arial';
+    font-weight: bold;
+    color:#fff;
+    display: block;
+    top: 70px;
+    font-size: 14px;
+    position: absolute;
+
+  }
+
+  .card-profile-image img:hover {
+    transform: translate(-50%, -33%);
+  }
+  label 				 {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+
+  }
+  .btn-outline-info{
+    width: 156px;
+    height: 33px;
+    margin: -57px 100px 0px 300px;
+    padding: 6px 38px 8px 37px;
+    background-color: #2f9ed0;
+
+  }
+
+  .btn-outline-dark{
+    width: 156px;
+    height: 33px;
+
+    margin: 38px 388px 0px 0px;
+    padding: 6px 38px 8px 37px;
+  }
+  /**.fas{
+    font-size: 45px;
+    padding-top: -100px;
+    margin: -22px 15px 14px 12px;
+    color: #526074;
+    background-color: #414d5e;
+    border-color: hidden;
+  }**/
+
+  .wrapper{
+    width: 116px;
+    height: 117px;
+    position: relative;
+    border: 2px dashed black;
+    display: flex;
+    background-color: #414d5e;
+    margin-top: 3px;
+    margin-left: 162px ;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-size: 100% 100%;
+    overflow: hidden;
+  }
+  .wrapper image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .wrapper .icon{
+    font-size: 100px;
+    color: #414d5e;
+
+  }
+
+  .wrapper .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #414d5e;
+  }
+
+  .wrapper #cancel-btn{
+    position: absolute;
+  }
+  .img-area{
+    border: 2px dashed black;
+
+    border-radius: 50%;
+    background-color: #414d5e;
+    width: 116px;
+    height: 117px;
+    margin-top: 3px;
+    padding: 23px 26px 26px 30px;
+    margin-left: 162px ;
+  }
+  .pre{
+    margin-top:0px;
+    margin-right: 7.4px;
+  }
+  .Besoin-daideeee{
+    width: 1900px;
+    height: 128px;
+
+
+  }
+
+
+  .ni{
+    width: 10.6px;
+    height: 16px;
+    margin: 38px 954px 0px 0px;
+    color:blue;
+  }
+  .Terminer{
+    width: 81px;
+    height: 19px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f5f8f9;
+  }
+  .group 			  {
+    position:relative;
+    margin-bottom:0px;
+  }
+
+  input:focus 		{ outline:none; }
+
+  label 				 {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+
+  }
+
+  input:focus ~ label, input:valid ~ label 		{
+    top:-25px;
+    font-size:13px;
+    color:#2f9ed0;
+    width: 88px;
+    height: 17px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  .container 		{
+    font-family:'Roboto';
+    width:600px;
+
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin:0px auto 0;
+    display:block;
+    background:#343c4c;
+    padding:0px 50px 0px;
+  }
+
+  input 				{
+    font-size:18px;
+    padding: 0px;
+    margin: 48px 0px 0px 0px;
+    width: 455px;
+    display:block;
+    border:none;
+    border-bottom:1px solid #757575;
+    background-color: #343c4c;
+  }
+  .contact-form .form-field{
+    position: relative;
+    margin: 32px 0;
+  }
+  .contact-form .input-text{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color:#5543Ca;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;;
+  }
+
+
+  .Rectangle-121{
+    width: 156px;
+    height: 33px;
+    margin: -73px 373px 270px 300px;
+    padding: 6px 38px 8px 37px;
+    border-radius: 2px;
+    background-color: #2f9ed0;
+  }
+
+
+  .Besoin-daide{
+    width: 571px;
+    height: 45px;
+    margin-top: 17px;
+    object-fit: contain;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #e5e5e5;
+  }
+
+
+
+
+
+  .text-centerr{
+    font-family: police1;
+    color:#ffff;
+    margin: 31px 0px 0px ;
+
+  }
+  #omos {
+    background-color:  #343c4c;
+
+
+
+    clear: both;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+  }
+  .card-deck{
+    margin: 1px 1px 1px 1px;
+    padding: 0px 12px 0px 0px;
+    width: 455px;
+    height: 210px;
+    margin: 10px ;
+  }
+
+  .icon1{
+    width: 50px;
+    height: 50px;
+    margin: 6px 0 0 15px;
+  }
+  .active{
+    width: 35px;
+    height: 35px;
+    margin: 0 0 5px;
+
+  }
+  a{
+    width: 135px;
+    height: 23px;
+    margin: 17px 0 0;
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2f9ed0;
+  }
+
+  .icon3{
+
+    margin: 17px 5em 0px;
+    font-family: Roboto;
+    font-size: 38px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0c6188;
+  }
+
+
+  .Crer-de-Zro{
+    width: 130px;
+    height: 33px;
+    margin: 1px 29px 0 38px;
+    font-size: 17px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+
+  }
+  .text-center1{
+    color: #2f9ed0;
+    padding-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .Crer-de-Zro{
+    color: #ffffff;
+  }
+  .text-center3{
+    width: 166px;
+    height: 49px;
+    margin: 1px 5px 6px 10px;
+    font-family: Roboto;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-size: 11px;
+
+    color: #ffffff;
+  }
+  .Service-Clients{
+    width: 146px;
+    height: 33px;
+    margin: 1px 0px 0 30px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+
+  .text-center4{
+    color: #ffffff;
+    width: 166px;
+    height: 49px;
+    margin: 1px 12px 6px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+
+  .img-fluid{
+    width: 571px;
+    height: 45px;
+    object-fit: contain;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #e5e5e5;
+  }
+
+  hr {
+
+    height: 2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 260px;
+    margin-right: 272px;
+    background-color: #6d6d6d;
+    align-items: center;
+    text-align: center;
+    border: none;
+
+
+  }
+  .Rectangle-11{
+    width: 100%;
+    height: 76px;
+
+    background-color: rgba(237, 237, 237, 0.05);
+
+
+
+  }
+
+
+  .card-header{
+    padding: 0px 24px 0;
+    background-color: #343c4c;
+    border-color: #343c4c;
+  }
+  .card-footer{
+    padding-top:0px ;
+    padding-bottom: 0px;
+    margin: 2px;
+    background-color: #343c4c;
+  }
+  h6{
+    color: #ffffff;
+  }
+
+  h4{
+    color:#ffffff;
+  }
+
+
+
+</style>

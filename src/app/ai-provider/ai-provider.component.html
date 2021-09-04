@@ -1,0 +1,96 @@
+
+  
+  
+<header>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css">
+</header>
+  
+  
+<app-header></app-header>
+<mat-toolbar > <span>
+  <mat-icon class="hello">chat </mat-icon>
+ demobot <mat-icon>arrow</mat-icon></span>
+  <button mat-button  fxHide.lt-md>
+    <span routerLink="/generateur" class="active" routerLinkActive="active">Génerateur</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span [routerLink]="['/ai-provider']">Intelligence artificielle</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span routerLink="/canaux" >Canaux</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span routerLink="/analytique">Analytique</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  </button>
+  <mat-icon class="icons">
+    extension
+    settings
+    people
+  </mat-icon>
+
+</mat-toolbar>
+
+  <div class="reset">
+    
+    <div style="position: absolute;top:15%;width: 25%;box-shadow: 10px 5px 5px rgb(233, 236, 233);">
+        <div (click)="load(m)"*ngFor="let m of menus" class="card color" [class.color]="m.title==AIprovider"style="width: 100%;">
+            <div class="card-body">
+              <div class="card-title titre">{{m.title}}</div>
+              
+              <div class="card-text desc">{{m.Description}}</div>
+              
+            </div>
+          </div>
+    
+    
+    
+         
+    </div>
+    
+    
+    
+    <div style="position:absolute;top:15%;left:31%;color:rgb(75, 50, 160);font-size: 30px;">AI Provider <strong></strong> </div>
+    <hr style="position:absolute;top:20%;left:30%;color:gray;width: 60%;height: 2px;">
+    
+    <div  [routerLink]="['/watson']" class="card watson" >
+        <img   style="margin: auto;" height="150px" width="150px"  src="assets/ibm-watson.png" >
+        <div class="card-body">
+          <p class="card-text text-center text">Connect</p>
+        </div>
+      </div>
+    
+      <div [routerLink]="['/micro-luis']" class="card microsoft" >
+        <img   style="margin: auto;" height="150px" width="200px" src="assets/microsoft.jpg" >
+        <div class="card-body">
+          <p class="card-text text-center text">Connect</p>
+        </div>
+      </div>
+    
+      <div [routerLink]="['/dialogflow']" class="card dialogflow" >
+       
+        <img   style="margin-top: 15%;"  height="150px" width="200px" src="assets/dia.png" >
+        <div class="card-body">
+          <p class="card-text text-center text">Connect</p>
+        </div>
+      </div>
+    
+      <div  class="card rasa" >
+        <img    class="card microsoft" >
+        <img   style="margin: auto;"  height="100px" width="200px" src="assets/rasa.png" >
+        <div class="card-body">
+          <p class="card-text text-center text">Connect</p>
+        </div>
+      </div>
+      
+      <div class="card  amazon-lex" >
+        <img   style="margin: auto;"height="150px" width="200px" src="assets/amazon-lex.png" >
+        <div class="card-body">
+          <p class="card-text text-center text">Connect</p>
+        </div>
+      </div>
+  </div>
+
+  
+ 

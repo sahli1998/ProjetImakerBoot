@@ -1,0 +1,79 @@
+
+<nav class="navbar">
+  
+    <div class="content">
+      <div class=logo>
+       
+        <img id="im"src="assets/argon-whiteccp.png" width="100px" height="100px">
+        
+      </div>
+      
+      <ul  class="menu-list">
+        <div  class="canacel-button">
+          <i class="fas fa-times closeBtn"></i>
+        </div>
+        <li>
+          <a href="#">
+            
+            CHATBOTS</a>
+          </li>
+  
+  
+  
+        <li>
+          <a href="#">
+          CENTRE_D'AIDE
+        </a></li>
+        <li>
+          
+          <a href="#">
+            <img width="20px" height="20px" src="assets/bell2.svg">
+            <img  width="20px" height="20px" src="assets/google.svg">
+            Mohamed_Sahli 
+           <i id="drop"class="far fa-caret-square-down"></i>
+          </a>
+        </li>
+        
+      </ul>
+     
+      <div  *ngIf="!test" class="menu-btn">   
+        <i (click)="open()" class="fas fa-bars menuBtn"></i>  
+      </div>
+  
+  
+  
+      <ul *ngIf="test" class="menu-list2">
+        <div  class="canacel-button">
+          <i (click)="close()"class="fas fa-times closeBtn"></i>
+        </div>
+        <li>
+          <a href="#">
+            
+            CHATBOTS</a>
+          </li>
+  
+  
+  
+        <li>
+          <a href="#">
+          CENTRE_D'AIDE
+        </a></li>
+        <li style="position: relative;right: 20px;">
+          
+          <a href="#">
+            
+            <img  id="compte" width="20px" height="20px" src="assets/google.svg">
+            Mohamed_Sahli
+            <img width="20px" height="20px" src="assets/bell2.svg">
+          </a>
+        </li>
+        
+      </ul>
+    
+      
+      
+    </div>
+  </nav>
+  
+  
+  

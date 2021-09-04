@@ -1,0 +1,49 @@
+
+<header>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css">
+</header>
+<app-header></app-header>
+<mat-toolbar > <span>
+  <mat-icon class="hello">chat </mat-icon>
+ demobot <mat-icon>arrow</mat-icon></span>
+  <button mat-button  fxHide.lt-md>
+    <span routerLink="/generateur" class="active" routerLinkActive="active">Génerateur</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span [routerLink]="['/ai-provider']">Intelligence artificielle</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span routerLink="/canaux" >Canaux</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span routerLink="/analytique">Analytique</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  </button>
+  <mat-icon class="icons">
+    extension
+    settings
+    people
+  </mat-icon>
+
+</mat-toolbar>
+<div class="menu"style="">
+    <div  (click)="load(m)" *ngFor="let m of menus"  [class.color]="m.title == entities" class="card card-detaills" style="width: 100%;">
+        <div class="card-body">
+          <div class="card-title titre">{{m.title}}</div>
+          
+          <div class="card-text desc">{{m.Description}}</div>
+          
+        </div>
+      </div>
+
+
+     
+</div>
+<div style="position:absolute;top:15%;left:35%;color:rgb(75, 50, 160);font-size: 30px;">Content Assistant<strong></strong> </div>
+<div class="containt">
+    <img width="30px" height="30px" src="assets/find.png">
+    
+    <a style="color: grey;font-size: 30px;"> ...</a>
+    &nbsp;
+    &nbsp;
+    <button class="btn" style="background: rgb(46, 223, 73);border-radius: 7px;color: white;">+ Add Content</button>
+    </div>
+<hr style="position:absolute;top:23%;left:35%;color:gray;width: 60%;height: 2px;">
+
+<a style="position: absolute;top: 55%;left:45%;color: gray;font-size: 35px;">
+    No Containt Found </a>

@@ -1,0 +1,238 @@
+
+ <header>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+</header>
+<app-header></app-header>
+<mat-toolbar > <span>
+  <mat-icon class="hello">chat </mat-icon>
+ demobot <mat-icon>arrow</mat-icon></span>
+  <button mat-button  fxHide.lt-md>
+    <span routerLink="/generateur" class="active" routerLinkActive="active">Génerateur</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span [routerLink]="['/ai-provider']">Intelligence artificielle</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span routerLink="/canaux" >Canaux</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span routerLink="/analytique">Analytique</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  </button>
+  <mat-icon class="icons">
+    extension
+    settings
+    people
+  </mat-icon>
+
+</mat-toolbar>
+<br>
+<br>
+
+
+<div style="width:25% ;background-color: rgb(38, 38, 74);height: 130%;">
+    <img class="im1"src="assets/person.png">
+    <br>
+    <br>
+    <br>
+
+    <p class="text-center" style="color: white;font-size: 25px;"> User Name </p>
+    <hr style="color: white;height: 5px;width: 100%;">
+    <br>
+    <br>
+    <p class="text-center" style="color: white;font-size: 15px;">{{email}}</p>
+    <br> 
+   
+    <hr style="background: white;height: 5px;width: 100%;">
+    <br>
+    <br><br>
+    
+   
+
+    
+
+    <!-- This is an anchor toggling the modal -->
+    <a class="reset" href="#modal-example" style="text-decoration: none;"uk-toggle>Reset Password</a>
+    
+    <!-- This is the modal -->
+    <div id="modal-example" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <form [formGroup]="ResetForm" (ngSubmit)="Reset()">
+
+
+              <a class="text" style="font-size: 25px;"><strong> < Create New Password </strong></a>
+  
+              <div class="uk-margin">
+
+                <div style="width: 120%;"class="uk-inline">
+                  <span class="uk-form-icon uk-form-icon-flip uk-form-password" uk-icon="icon: lock"></span>
+                  <input formControlName="password"type="password" placeholder="Recent Password"style="border-radius: 5px;"class="uk-input" >
+                  <div *ngIf="f.password.dirty">
+                    <img *ngIf="  f.password.valid " style="margin-left:1% ;" width="8%" height="8%" src="assets/accept1.png">
+                <img *ngIf=" f.password.invalid " style="margin-left:1% ;" width="8%" height="8%" src="assets/refuse2.jpg">
+          
+                  </div>
+              </div>
+<br>
+<br>
+                  <div style="width: 120%;"class="uk-inline">
+                      <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                      <input formControlName="newPassword" type="password" placeholder="New Password"style="border-radius: 5px;"class="uk-input" >
+                  </div>
+                  <img *ngIf="f.newPassword.dirty && f.newPassword.valid" width="8%" height="8%" style="margin-left:1% ;" src="assets/accept1.png">
+              <img *ngIf="f.newPassword.dirty && f.newPassword.invalid" width="8%" height="8%" style="margin-left:1% ;" src="assets/refuse2.jpg">
+              </div>
+              
+              <div class="uk-margin">
+                <div style="width: 100%;"class="uk-inline">
+                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                    <input formControlName="repeatNewPassword"type="password" placeholder="Reapate New Password"style="border-radius: 5px;"class="uk-input" >
+                </div>
+                <div *ngIf="f.repeatNewPassword.dirty">
+                  <img *ngIf="  f.repeatNewPassword.valid && f.repeatNewPassword.value == f.newPassword.value" style="margin-left:1% ;" width="8%" height="8%" src="assets/accept1.png">
+              <img *ngIf=" f.repeatNewPassword.invalid || f.repeatNewPassword.value != f.newPassword.value" style="margin-left:1% ;" width="8%" height="8%" src="assets/refuse2.jpg">
+        
+                </div>
+                
+                
+            </div>
+            <p class="uk-text-right">
+              <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+              <button  class="uk-button uk-button-primary" type="submit">Save</button>
+          </p>
+
+            </form>
+            
+        </div>
+    </div>
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+   
+
+
+
+
+
+
+     
+</div>
+<app-footer ></app-footer>
+
+
+  <form [formGroup]="AccountForm" (ngSubmit)="UpdateAccount()">
+
+    <div class="title" ><strong>My Account</strong> </div>
+<button  [disabled]=" g.fullName.errors || g.CompanyWebsite.errors || g.CompanyNumber.errors || g.language.errors || g.timeZone.errors || g.phone.errors " type="submit" class="btn btn-outline-primary save">Save Changes</button>
+<hr style="position:absolute;top:20%;left:30%;color:gray;width: 60%;height: 2px;">
+
+<div style="position:absolute;top:30%;left:30%;width:60%">
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-pills card-header-pills">
+          <li style="margin-left: 10%;font-size: 20px;" class="nav-item">
+            <a [class.prof]="myProfile" (click)="prof()" class="nav-link b" >My Profile </a>
+          </li>
+          <li   class="nav-item prefer">
+            <a  [class.pref]="Preferences" (click)="pref()" class="nav-link b" >Preferences</a>
+          </li>
+          
+        </ul>
+      </div>
+      <div class="card-body">
+        
+        <div  *ngIf="myProfile">
+          
+          
+          
+          
+          <input  formControlName="fullName" class="form-control" aria-label="Sizing example input" style="border-radius: 5px;" type="text" placeholder="Full Name*" >
+        
+            <img *ngIf="g.fullName.dirty && g.fullName.valid" width="4%" height="4%" style="margin-left:1% ;float: left" src="assets/accept1.png">
+            <img *ngIf="g.fullName.dirty && g.fullName.invalid" width="4%" height="4%" style="margin-left:1% ;float: left;margin-top: 3px;" src="assets/refuse.png">
+  
+          
+          <br>
+          
+          
+         
+          
+          
+          
+          <input formControlName="phone" class="form-control" aria-label="Sizing example input"style="border-radius: 5px;" type="number" placeholder="Phone*"  >
+          
+            <img *ngIf="g.phone.dirty && g.phone.valid" width="4%" height="4%" style="margin-left:1% ;float: left" src="assets/accept1.png">
+              <img *ngIf="g.phone.dirty && g.phone.invalid" width="4%" height="4%" style="margin-left:1% ;float: left;margin-top: 3px;" src="assets/refuse.png">
+  
+  
+         
+          <br>
+          
+          <input formControlName="CompanyWebsite" class="form-control" aria-label="Sizing example input"style="border-radius: 5px;"type="text" placeholder="Company Website*"  >
+          <div *ngIf="g.CompanyWebsite.dirty" >
+            <img *ngIf="g.CompanyWebsite.dirty && g.CompanyWebsite.valid" width="4%" height="4%" style="margin-left:1% ;float: left;" src="assets/accept1.png">
+            <img  *ngIf="g.CompanyWebsite.dirty && g.CompanyWebsite.invalid" width="4%" height="4%" style="margin-left:1% ;float: left;margin-top: 3px;" src="assets/refuse.png">
+
+  
+          </div>
+          <br>
+         
+          <input formControlName="CompanyNumber" class="form-control" aria-label="Sizing example input"style="border-radius: 5px;"type="number" placeholder="Company Number Of Employees*"  >
+          <div *ngIf="g.CompanyNumber.dirty">
+            <img *ngIf="g.CompanyNumber.dirty && g.CompanyNumber.valid" width="4%" height="4%" style="margin-left:1% ;float: left" src="assets/accept1.png">
+            <img *ngIf="g.CompanyNumber.dirty && g.CompanyNumber.invalid" width="4%" height="4%" style="margin-left:1% ;float: left;margin-top: 10px;" src="assets/refuse.png">
+
+  
+          </div>
+          <br>
+          
+        
+  
+        </div>
+
+
+        <div *ngIf="Preferences">
+            
+            <div style="border-radius:10px" class="uk-form-select" data-uk-form-select>
+                <span>Select Your Language &nbsp;&nbsp;</span>
+                <select formControlName="language">
+                    <option style="border-radius:10px" class="form-control" value="english">English</option>
+                    <option  style="border-radius:10px" class="form-control" value="frensh">Frensh</option>
+                    <option style="border-radius:10px"  class="form-control" value="arabic">Arabic</option>
+                    <option  style="border-radius:10px" class="form-control" value="deutsh">Deutsh</option>
+                </select>
+            </div>
+            <br>
+            <br>
+
+            <div style="border-radius:10px" class="uk-form-select" data-uk-form-select>
+                <span>Select Your  Time Zone &nbsp;&nbsp;</span>
+                <select formControlName="timeZone" style="width:50%">
+                    <option  *ngFor="let zone of timezones"  class="form-control times" value="{{zone}}">{{zone}}</option>
+                    
+                </select>
+            </div>
+
+
+           
+        
+      </div>
+
+
+      
+    </div>
+  </div>
+
+</div>
+</form>
+
+
+
+

@@ -1,0 +1,127 @@
+
+.card .card-detaills{
+    background: rgb(243, 241, 241);
+}
+.b:hover{
+    color: rgb(98, 236, 236);
+}
+.b{
+    color:darkgray;
+    text-decoration: none;
+}
+
+.card-title{
+    font-size: 20px;
+}
+.color{
+    background: rgb(177, 241, 241);
+}
+.card-detaills:hover{
+    background: rgb(179, 219, 243);
+}
+.menu{
+    position: absolute;
+    top:15%;width: 25%;box-shadow: 10px 5px 5px rgb(205, 213, 205); 
+}
+
+.intents{
+    position: absolute;
+    top:15%;
+    left: 70%;
+}
+@media(max-width:780px){
+    .intents{
+        position: absolute;
+        top:15%;
+        left: 55%;
+    }
+}
+@media(max-width:500px){
+    .intents{
+        position: absolute;
+        top:25%;
+        left: 36%;
+    }
+}
+.titre{
+    font-size: 20px;
+
+}
+.desc{
+    font-size: 16px;
+
+}
+@media(max-width:500px){
+    .titre{
+        font-size: 12px;
+    
+    }
+    .desc{
+        font-size: 9px;
+    
+    }
+}
+@media(max-width:420px){
+    .titre{
+        font-size: 10px;
+    
+    }
+    .desc{
+        font-size: 7px;
+    
+    }
+}
+.reset{
+    background: #ffffff;
+    height: 1000px;
+    width: 100%;
+}
+@media(max-width:376px){
+    .titre{
+        font-size: 8px;
+    
+    }
+    .desc{
+        font-size: 6px;
+    
+    }
+}
+@media(max-width:560px){
+    .contenu{
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+@media(max-width:950px){
+    .reset{
+        background: #ffffff;
+        height: 1200px;
+        width: 100%;
+    }
+  
+}
+@media(max-width:760px){
+    .reset{
+        background: #ffffff;
+        height: 1300px;
+        width: 100%;
+    }
+  
+}
+@media(max-width:620px){
+    .reset{
+        background: #ffffff;
+        height: 1500px;
+        width: 100%;
+    }
+  
+}
+@media(max-width:580px){
+    .reset{
+        background: #ffffff;
+        height: 1800px;
+        width: 100%;
+        
+    }
+  
+}

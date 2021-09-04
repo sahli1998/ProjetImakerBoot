@@ -1,0 +1,397 @@
+.card:hover{
+    background: rgb(179, 219, 243);
+}
+.card-title{
+    font-size: 20px;
+}
+.watson{
+    width: 15%;height: 25%;
+    padding: 5px;
+    position: absolute;
+    top:25%;
+    left: 30%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(83, 84, 83);
+}
+.reset{
+    background: #e2e2e7;
+    height: 1000px;
+}
+.microsoft{
+    width: 15%;height: 25%;padding: 5px;
+    position: absolute;
+    top:25%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(83, 84, 83);
+
+}
+.color{
+    background: rgb(177, 241, 241);
+}
+.dialogflow{
+    width: 15%;height: 25%;padding: 5px;
+    position: absolute;
+    top:25%;
+    left: 70%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(83, 84, 83);
+
+}
+.rasa{
+    width: 15%;height: 25%;padding: 5px;
+    position: absolute;
+    top:65%;
+    left: 30%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(83, 84, 83);
+
+
+}
+
+
+.text{
+    font-size: 20px;
+}
+.amazon-lex{
+    width: 15%;
+    height: 25%;
+    padding: 5px;
+    position: absolute;
+    top:65%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgb(83, 84, 83);
+
+}
+@media(max-width:780px){
+    .text{
+        font-size: 10px;
+    }
+}
+@media(max-width:780px){
+    .watson{
+        width: 25%;height: 30%;
+        padding: 10px;
+        position: absolute;
+        top:25%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    }
+    .microsoft{
+        width: 25%;height: 30%;padding: 10px;
+        position: absolute;
+        top:25%;
+        left: 65%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+
+    .dialogflow{
+        width: 25%;height: 30%;padding: 10px;
+        position: absolute;
+        top:60%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+    .rasa{
+        width: 25%;height: 30%;padding: 10px;
+        position: absolute;
+        top:60%;
+        left: 65%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    
+    }
+    
+    
+    
+    .amazon-lex{
+        width: 25%;
+        height: 30%;
+        padding: 10px;
+        position: absolute;
+        top:95%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+    
+}
+@media(max-width:600px){
+    
+}
+@media(max-width:500px){
+    .watson{
+        width: 25%;height: 20%;
+        padding: 10px;
+        position: absolute;
+        top:25%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    }
+    .microsoft{
+        width: 25%;height: 20%;padding: 10px;
+        position: absolute;
+        top:25%;
+        left: 65%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+
+    .dialogflow{
+        width: 25%;height: 20%;padding: 10px;
+        position: absolute;
+        top:60%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+    .rasa{
+        width: 25%;height: 20%;padding: 10px;
+        position: absolute;
+        top:60%;
+        left: 65%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    
+    }
+    
+    
+    
+    .amazon-lex{
+        width: 25%;
+        height: 20%;
+        padding: 10px;
+        position: absolute;
+        top:95%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+    
+}
+@media(max-width:700px){
+    .watson{
+        width: 25%;height: 23%;
+        padding: 10px;
+        position: absolute;
+        top:25%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    }
+    .microsoft{
+        width: 25%;height: 23%;padding: 10px;
+        position: absolute;
+        top:25%;
+        left: 65%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+
+    .dialogflow{
+        
+        width: 25%;height: 23%;padding: 10px;
+        position: absolute;
+        top:60%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+    .rasa{
+        width: 25%;height:23%;padding: 10px;
+        position: absolute;
+        top:60%;
+        left: 65%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    
+    }
+    
+    
+    
+    .amazon-lex{
+        width: 25%;
+        height: 23%;
+        padding: 10px;
+        position: absolute;
+        top:95%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+    
+}
+
+@media(max-width:450px){
+    .watson{
+        width: 25%;height: 20%;
+        padding: 10px;
+        position: absolute;
+        top:25%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    }
+    .microsoft{
+        width: 25%;height: 20%;padding: 10px;
+        position: absolute;
+        top:25%;
+        left: 65%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+
+    .dialogflow{
+        
+        width: 25%;height: 20%;padding: 10px;
+        position: absolute;
+        top:60%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+    .rasa{
+        width: 25%;height:20%;padding: 10px;
+        position: absolute;
+        top:60%;
+        left: 65%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    
+    }
+    
+    
+    
+    .amazon-lex{
+        width: 25%;
+        height: 20%;
+        padding: 10px;
+        position: absolute;
+        top:95%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+    
+}
+@media(max-width:364px){
+    .text{
+        font-size: 7px;
+    }
+}
+
+@media(max-width:370px){
+    .watson{
+        width: 25%;height: 17%;
+        padding: 10px;
+        position: absolute;
+        top:25%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    }
+    .microsoft{
+        width: 25%;height: 17%;padding: 10px;
+        position: absolute;
+        top:25%;
+        left: 65%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+
+    .dialogflow{
+        
+        width: 25%;height: 17%;padding: 10px;
+        position: absolute;
+        top:60%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+    .rasa{
+        width: 25%;height:17%;padding: 10px;
+        position: absolute;
+        top:60%;
+        left: 65%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    
+    }
+    
+    
+    
+    .amazon-lex{
+        width: 25%;
+        height: 17%;
+        padding: 10px;
+        position: absolute;
+        top:95%;
+        left: 30%;
+        border-radius: 10px;
+        box-shadow: 10px 5px 5px rgb(83, 84, 83);
+    
+    }
+    
+}
+.titre{
+    font-size: 20px;
+
+}
+.desc{
+    font-size: 16px;
+
+}
+@media(max-width:500px){
+    .titre{
+        font-size: 12px;
+    
+    }
+    .desc{
+        font-size: 9px;
+    
+    }
+}
+@media(max-width:420px){
+    .titre{
+        font-size: 10px;
+    
+    }
+    .desc{
+        font-size: 7px;
+    
+    }
+}
+@media(max-width:376px){
+    .titre{
+        font-size: 8px;
+    
+    }
+    .desc{
+        font-size: 6px;
+    
+    }
+}

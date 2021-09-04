@@ -1,0 +1,69 @@
+<header>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css">
+</header>
+<app-navbar></app-navbar>
+<div  class="reset">
+  
+    <nav style="background:#191d4d"class="navbar ">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          
+          
+        </div>
+      </div>
+    </nav>
+    <div class="contenu">
+      <div class="text2">
+        <a class="text1 " style="color: gray;"> > Forget Your Password ?</a>
+        <br>
+        <br>
+        
+        <a> It happens (: </a>
+            <br>
+            <a>Enter the email registred on</a>
+            <br>
+            <a>BLIP and we will send you a link</a>
+            <br>
+            <a>so you can create a new password </a>
+            <br>
+       
+      </div>
+      <form [formGroup]="EmailForm" (ngSubmit)="Confirme()" style="margin-top: 5%;">
+        <div *ngIf="f.email.dirty && f.email.invalid" >
+                  
+          <small class="text-danger">*Please Provide a Valid Email</small>
+        
+      </div>
+        <div   class="uk-margin">
+            <div style="width: 90%;border-radius: 6px;" class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: mail"></span>
+
+                <input [class.validInput]="f.email.valid"[class.errorInput]="f.email.dirty && f.email.invalid" formControlName="email" placeholder="Email"  style="border-radius: 6px;box-shadow: 5px 2px 2px grey;"class="uk-input" type="email">
+                
+              
+                <br>
+              
+                
+                <button type="submit"style="margin-top:5%;"id="send" [disabled]="f.email.errors"class="btn btn-primary">send</button>
+                
+            </div>
+            <img *ngIf="f.email.dirty && f.email.valid" width="8%" height="8%" src="assets/accept1.png">
+            <img *ngIf="f.email.dirty && f.email.invalid"  width="8%" height="8%" src="assets/refuse2.jpg">
+          
+        </div>
+        <div *ngIf="loading" class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        
+        </form>
+   
+  
+    </div>
+  
+    
+            
+    
+  
+  </div>
+  <app-footer style="position: absolut;top: 100%;"></app-footer>
+

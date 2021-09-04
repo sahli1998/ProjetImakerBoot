@@ -1,0 +1,316 @@
+<mat-toolbar > <span>
+  <mat-icon class="hello">chat </mat-icon>
+ demobot <mat-icon>arrow</mat-icon></span>
+  <button mat-button  fxHide.lt-md>
+    <span [routerLink]="['/generateur']" >Génerateur</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span [routerLink]="['/ai-provider']">Intelligence artificielle</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>Canaux</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>Analytique</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  </button>
+  <mat-icon class="icons">
+    extension
+    settings
+    people
+  </mat-icon>
+
+</mat-toolbar>
+
+<div class="content">
+  <span class="demobot">
+    <mat-icon class="hello">chat </mat-icon>
+   demobot <mat-icon>arrow</mat-icon></span>
+  <div fxLayout="row wrap" fxLayoutGap="32px grid">
+
+    <div fxFlex.xs="100%" fxFlex.sm="275%" >
+
+      <mat-card class="mat-elevation-z4" style="margin-left: 280px;">
+
+        <mat-card-header>
+          <mat-icon class="icons" >
+           people</mat-icon>
+        </mat-card-header>
+        <mat-card-content >
+          <mat-card-title class="title">Utilisateurs</mat-card-title>
+
+        </mat-card-content>
+        <mat-card-actions>
+          <span class="uti">0</span>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+
+
+    <div fxFlex.xs="100%" fxFlex.sm="275%" >
+      <mat-card class="mat-elevation-z4">
+        <mat-card-header>
+          <mat-icon class="icons1"> forum</mat-icon>
+
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card-title class="title">Message reçus</mat-card-title>
+
+        </mat-card-content>
+        <mat-card-actions>
+          <span class="Mr">0</span>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+
+    <div fxFlex.xs="100%" fxFlex.sm="275%" >
+      <mat-card class="mat-elevation-z4">
+        <mat-card-header>
+          <mat-icon class="icons2"> forum</mat-icon>
+
+        </mat-card-header>
+        <mat-card-content>
+          <mat-card-title class="title">Message envoyés</mat-card-title>
+
+        </mat-card-content>
+        <mat-card-actions>
+          <span class="Me">0</span>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div fxFlex.xs="100%" fxFlex.sm="275%" >
+      <mat-card class="mat-elevation-z4">
+        <mat-card-content>
+          <b>Culture</b><br>
+        </mat-card-content><br>
+        <mat-card-content><br>
+          <span>Tunis_Tunisia</span><br>
+        </mat-card-content>
+        <mat-card-content><b>Fuseau horaire</b><br></mat-card-content>
+        <mat-card-content><span>(UCT+1: 00)</span><br></mat-card-content>
+
+          <mat-card-content><b>Groupement</b><br></mat-card-content><br>
+
+          <mat-card-content><span>Standard</span><br></mat-card-content>
+
+
+        <mat-card-actions>
+
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  <div fxFlex.xs="100%" fxFlex.sm="275%" >
+    <mat-card class="mat-elevation-z2" style="margin-left: 280px;">
+      <mat-card-header>
+        <mat-card-title class="pub">Equipe</mat-card-title>
+      </mat-card-header>
+      <mat-card-content >
+        <mat-icon class="icons4">
+          people</mat-icon>
+          <span>vous n'avez encore invité personne à faire parie de votre projet de bot</span><br>
+          <a>Commencer maintenant</a>
+      </mat-card-content>
+
+    </mat-card>
+    </div>
+
+    <div fxFlex.xs="100%" fxFlex.sm="2750%" >
+    <mat-card class="mat-elevation-z2">
+      <mat-card-header>
+        <mat-card-title  class="title">Publié à </mat-card-title>
+
+      </mat-card-header>
+      <mat-card-content >
+        <mat-icon class="icons">
+          chat</mat-icon>
+          <mat-icon>
+            mail</mat-icon>
+      </mat-card-content>
+
+    </mat-card>
+    </div>
+    </div>
+  </div>
+
+
+<style>
+
+mat-toolbar {
+    justify-content: space-between;
+}
+
+.content {
+    padding: 16px;
+}
+
+.content > mat-card {
+    margin-bottom: 16px;
+}
+  .Rectangle-11{
+    width: 100%;
+    height: 15px;
+    margin-top: 204px;
+    background-color: rgba(237, 237, 237, 0.05);
+
+  }
+  .Besoin-daide{
+    width: 571px;
+    height: 45px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17px;
+    object-fit: contain;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #e5e5e5;
+  }
+  hr {
+    height: 2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #6d6d6d;
+    align-items: center;
+    text-align: center;
+    border: none;
+
+
+  }
+  .mat-elevation-z4{
+    height: 275px;
+    width: 237px;
+    margin: 32px;
+    padding: 30px;
+  }
+  .mat-elevation-z2{
+    height: 191px;
+    width: 569px;
+    margin: 32px;
+  }
+.icons{
+  width: 30px;
+  height: 21.2px;
+  margin: 0 53px 14.8px 50px;
+  color: #2f9ed0;
+}
+.icons1{
+  width: 30px;
+  height: 21.2px;
+  margin: 0 53px 14.8px 50px;
+  color: #d02f5f;
+}
+.icons2{
+  width: 30px;
+  height: 21.2px;
+  margin: 0 53px 14.8px 50px;
+  color:  #04a74f;
+}
+
+.title{
+  width: 82px;
+  height: 26px;
+  margin: 14.8px 0 24px;
+  margin-left: 61px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #6d6d6d;
+}
+
+.uti{
+  width: 20px;
+  height: 34px;
+  margin: 24px 22px 0 80px;
+  font-family: Karla;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2f9ed0;
+}
+.mat-toolbar{
+  color: #FFF;
+  background-color: #2e3542;
+}
+.mat-button{
+  vertical-align: middle;
+  line-height: 5px;
+    text-align: center;
+    margin:0 auto;
+    display:inline-block;
+
+}
+.demobot{
+  width: 133px;
+  height: 33px;
+  margin: 18px 137px 12px 12px;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #575555;
+}
+
+.Mr{
+  width: 20px;
+  height: 34px;
+  margin: 24px 22px 0 80px;
+  font-family: Karla;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d02f5f;
+}
+.Me{
+  width: 20px;
+  height: 34px;
+  margin: 24px 22px 0 80px;
+  font-family: Karla;
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color:  #04a74f;
+}
+.icons4{
+  width: 38px;
+  height: 38px;
+  margin: 9px 27px 0 32px;
+}
+a{
+  margin: 99px;
+}
+.pub{
+  width: 82px;
+  height: 26px;
+  margin: 14.8px 0 24px;
+  margin-left: 17px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #6d6d6d;
+}
+</style>

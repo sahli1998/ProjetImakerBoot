@@ -1,0 +1,97 @@
+
+.card .card-detaills{
+    background: rgb(243, 241, 241);
+}
+.b:hover{
+    color: rgb(98, 236, 236);
+}
+.b{
+    color:darkgray;
+    text-decoration: none;
+}
+
+.card-title{
+    font-size: 20px;
+}
+.color{
+    background: rgb(177, 241, 241);
+}
+.card-detaills:hover{
+    background: rgb(179, 219, 243);
+}
+.conf{
+    margin-left: 20%;
+}
+.deco{
+    margin-left: 20%;
+}
+@media(max-width:1060px){
+    .conf{
+        margin-left: 15%;
+    }
+    .deco{
+        margin-left: 15%;
+    }
+}
+@media(max-width:910px){
+    .conf{
+        margin-left: 10%;
+    }
+    .deco{
+        margin-left: 10%;
+    }
+}
+@media(max-width:800px){
+    .conf{
+        margin-left: 5%;
+    }
+    .deco{
+        margin-left: 5%;
+    }
+}
+@media(max-width:710px){
+    .conf{
+        margin-left: 1%;
+    }
+    .deco{
+        margin-left: 1%;
+    }
+}
+.titre{
+    font-size: 20px;
+
+}
+.desc{
+    font-size: 16px;
+
+}
+@media(max-width:500px){
+    .titre{
+        font-size: 12px;
+    
+    }
+    .desc{
+        font-size: 9px;
+    
+    }
+}
+@media(max-width:420px){
+    .titre{
+        font-size: 10px;
+    
+    }
+    .desc{
+        font-size: 7px;
+    
+    }
+}
+@media(max-width:376px){
+    .titre{
+        font-size: 8px;
+    
+    }
+    .desc{
+        font-size: 6px;
+    
+    }
+}

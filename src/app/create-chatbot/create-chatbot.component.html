@@ -1,0 +1,573 @@
+
+<section>
+  <div class="spacer1" >
+  <ul>
+    <li> <a href="#"><i class="fal fa-comment-alt"></i>IMakeBot</a> </li>
+    <li> <a mat-button routerLink="/generateur"  routerLinkActive="active">chatbots</a></li>
+    <li><a mat-button routerLink="/intelArti"   routerLinkActive="active">centre d'aide</a></li>
+    
+    <li> <p  href="#"style="color: #FFF;"><i class="far fa-bell"></i><i mat-button class="far fa-user-circle" routerLink="/intelArti" style="margin-top: -300px; margin-left:91rem;" ></i>user Name</p></li>
+  </ul>
+</div>
+
+
+
+
+</section>
+<main>
+  <div class="spacer" >
+    <ul>
+      <li><a> <i class="fab fa-sistrix" style="color:#FFF ;margin-left:0px "></i></a></li>
+      <li> <button mat-button (click)="creerChat()"   >créer un Chatbot</button></li>
+
+    </ul>
+  </div>
+  <section class="create-bot" id="omos">
+    <div class="container pt-lg-md">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="163" height="135"  style=" margin:0 46px 48px 11px;" fill="currentColor"  class="bi bi-chat-square1" viewBox="0 0 16 16">
+          <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        </svg>
+      </div>
+      <div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="102" height="96"  style=" margin:58px 58px 46px 0;" fill="currentColor"  class="bi bi-chat-square" viewBox="0 0 16 16">
+          <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="58"   style=" margin:48px 0 94px 58px;" fill="currentColor"  class="bi bi-chat-square2" viewBox="0 0 16 16">
+          <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+        </svg>
+
+      </div>
+
+      <div class="Aucun-Chatbot-enregistr">
+        <span>Aucun Chatbot enregistré</span>
+
+      </div>
+      <button  (click)="creerChat()" class="btn btn-outline-info btn-block" >
+        <span  class="Terminer"  >Créer un Chatbot</span>
+      </button>
+    </div>
+
+    <div class="Rectangle-11">
+      <hr>
+      <img class="Besoin-daide" src="../../assets/img/icons/gdcollect-data.fr 2020 All Rights Reserved Terms o@3x.png">
+    </div>
+
+
+  </section>
+</main>
+
+<style>
+
+.far{
+  margin-right: 5px;
+
+}
+
+  .Aucun-Chatbot-enregistr {
+    width: 160px;
+    height: 14px;
+    margin: 46px 30px 7px 200px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #6d6d6d;
+  }
+  .Aucun-Chatbot-enregistr {
+    width: 160px;
+    height: 14px;
+    margin: 46px 30px 7px 200px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #6d6d6d;
+  }
+
+  .btn {
+    width: 123px;
+    height: 33px;
+    margin: 7px 29px 0 68px;
+    padding: 6px 0 6px 3px;
+    border-radius: 2px;
+    background-color: #2f9ed0;
+  }
+
+
+  .btn-outline-info{
+    width: 157px;
+    height: 33px;
+    margin: 41px 68px 0 135px;
+    padding: 6px 0 6px 3px;
+    border-radius: 2px;
+    background-color: #2f9ed0;
+
+  }
+  .containerr .wrapper{
+    width: 116px;
+    height: 117px;
+    border: 2px dashed black;
+    display: flex;
+    background-color: #414d5e;
+    border-radius: 50%;
+    margin-top: 3px;
+    padding: 23px 26px 26px 30px;
+    margin-left: 162px ;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+  }
+  .wrapper .image{
+    position: absolute;
+    height: 10%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .wrapper .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .wrapper .icon{
+    font-size: 100px;
+    color: #414d5e;
+
+  }
+
+  .wrapper .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #414d5e;
+  }
+  .wrapper #cancel-btn{
+    position: absolute;
+  }
+  .img-area{
+    border: 2px dashed black;
+
+    border-radius: 50%;
+    background-color: #414d5e;
+    width: 116px;
+    height: 117px;
+    margin-top: 3px;
+    padding: 23px 26px 26px 30px;
+    margin-left: 162px ;
+  }
+  .pre{
+    margin-top:0px;
+    margin-right: 7.4px;
+  }
+  .Besoin-daideeee{
+    width: 1900px;
+    height: 128px;
+
+
+  }
+
+  .Terminer{
+    width: 120px;
+    height: 21px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+  }
+  .group 			  {
+    position:relative;
+    margin-bottom:0px;
+  }
+
+  input:focus 		{ outline:none; }
+
+  label 				 {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+
+  }
+
+  input:focus ~ label, input:valid ~ label 		{
+    top:-25px;
+    font-size:13px;
+    color:#2f9ed0;
+    width: 88px;
+    height: 17px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  .container 		{
+    font-family:'Roboto';
+    width:600px;
+
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin:0px auto 0;
+    display:block;
+    background:#fff;
+    padding:0px 50px 0px;
+  }
+
+  input 				{
+    font-size:18px;
+    padding: 0px;
+    margin: 48px 0px 0px 0px;
+    width: 455px;
+    display:block;
+    border:none;
+    border-bottom:1px solid #757575;
+    background-color: #343c4c;
+  }
+  .contact-form .form-field{
+    position: relative;
+    margin: 32px 0;
+  }
+  .contact-form .input-text{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color:#5543Ca;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;;
+  }
+
+
+  .Rectangle-121{
+    width: 156px;
+    height: 33px;
+    margin: -73px 373px 270px 300px;
+    padding: 6px 38px 8px 37px;
+    border-radius: 2px;
+    background-color: #2f9ed0;
+  }
+
+
+  .Besoin-daide{
+    width: 571px;
+    height: 45px;
+    margin-top: 17px;
+    object-fit: contain;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #e5e5e5;
+  }
+
+
+
+
+
+  .text-centerr{
+    font-family: police1;
+    color:#ffff;
+    margin: 31px 0px 0px ;
+
+  }
+  #omos {
+    background-color:  #fff;
+
+
+
+
+
+    clear: both;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+
+  }
+  .card-deck{
+    margin: 1px 1px 1px 1px;
+    padding: 0px 12px 0px 0px;
+    width: 455px;
+    height: 210px;
+    margin: 10px ;
+  }
+
+  .icon1{
+    width: 50px;
+    height: 50px;
+    margin: 6px 0 0 15px;
+  }
+  .active{
+    width: 35px;
+    height: 35px;
+    margin: 0 0 5px;
+
+  }
+  a{
+    width: 155px;
+
+    margin: 17px 0 0;
+    font-family: Roboto;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2f9ed0;
+  }
+
+  .icon3{
+
+    margin: 17px 5em 0px;
+    font-family: Roboto;
+    font-size: 38px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #0c6188;
+  }
+
+
+  .Crer-de-Zro{
+    width: 130px;
+    height: 33px;
+    margin: 1px 29px 0 38px;
+    font-size: 17px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+
+  }
+  .text-center1{
+    color: #2f9ed0;
+    padding-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .Crer-de-Zro{
+    color: #ffffff;
+  }
+  .text-center3{
+    width: 166px;
+    height: 49px;
+    margin: 1px 5px 6px 10px;
+    font-family: Roboto;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-size: 11px;
+
+    color: #ffffff;
+  }
+  .Service-Clients{
+    width: 146px;
+    height: 33px;
+    margin: 1px 0px 0 30px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+
+  .text-center4{
+    color: #ffffff;
+    width: 166px;
+    height: 49px;
+    margin: 1px 12px 6px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+
+  .img-fluid{
+    width: 571px;
+    height: 45px;
+    object-fit: contain;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #e5e5e5;
+  }
+
+  hr {
+
+    height: 2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #6d6d6d;
+    align-items: center;
+    text-align: center;
+    border: none;
+
+
+  }
+  .Rectangle-11{
+    width: 100%;
+    height: 76px;
+    margin-top: 442px;
+    background-color: rgba(237, 237, 237, 0.05);
+
+
+
+  }
+
+
+  .card-header{
+    padding: 0px 24px 0;
+    background-color: #fff;
+    border-color: #fff;
+  }
+  .card-footer{
+    padding-top:0px ;
+    padding-bottom: 0px;
+    margin: 2px;
+    background-color: #343c4c;
+  }
+  h6{
+    color: #ffffff;
+  }
+
+  h4{
+    color:#ffffff;
+  }
+
+   .spacer {
+     height: 48px;
+     background-color:#2e3542;
+     padding: 7px 0;
+
+
+   }
+  .spacer ul{
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+
+
+  }
+
+  .spacer ul li{
+    list-style: none;
+    margin: 0 20px;
+    display: inline;
+  }
+  .spacer ul li button {
+    color:#fff;
+background-color: #2e3542;
+    height: 30px;
+    margin: -11px 0px 0px 0px;
+    padding: 0px 2px 4px 7px;
+    border-radius: 6px;
+    border: solid 2px #2f9ed0;
+  }
+  .text-left{
+  flex: 1 1 auto;
+}
+  .spacer1 {
+    height: 59px;
+    background-color: #272e3a;
+    padding: 10px 0;
+  }
+
+
+  .spacer1 ul li{
+    list-style: none;
+    display: inline;
+
+  }
+  .spacer1 ul li a {
+    color: #fff;
+    font-size: 20px;
+    line-height: normal;
+    font-family: Roboto;
+    font-stretch: normal;
+    margin-top: auto;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    transition: 0.5s;
+  }
+  .spacer1 ul li a.active{
+    background:  #2f9ed0;
+  }
+  .spacer1 ul li:hover a {
+    background:  #2f9ed0;
+  }
+
+p{
+  color: #fff;
+    font-size: 20px;
+    line-height: normal;
+    font-family: Roboto;
+    font-stretch: normal;
+    margin-top: auto;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    transition: 0.5s;
+}
+  </style>
+
+
+
+
+
